@@ -16,7 +16,7 @@ const Home = () => {
       navigator('/flights');
    }
    return (
-      <div className='container'>
+      <div className='container d-flex justify-content-start flex-column align-items-start py-3'>
          <button className='btn btn-info' onClick={viewListAirports}>View List Airports</button>
          <button className='btn btn-info' onClick={viewListSeatClasses}>View List Seat Classes</button>
          <button className='btn btn-info' onClick={viewListFlights}>View List Flights</button>

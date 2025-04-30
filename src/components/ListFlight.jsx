@@ -15,6 +15,7 @@ const ListFlight = () => {
       listFlights()
          .then((response) => {
             setFlights(response.data);
+
          })
          .catch((error) => {
             console.error('Error fetching flights:', error);
@@ -64,11 +65,12 @@ const ListFlight = () => {
                {flights.map((flight) => (
                   <tr key={flight.id}>
                      <td>{flight.id}</td>
-                     <td>
+                     {/* <td>
                         {
                            getAirport(flight.departureAirportId).name
                         }
-                     </td>
+                     </td> */}
+                     <td>{flight.departureAirportId}</td>
                      <td>{getAirport(flight.arrivalAirportId).name}</td>
                      <td>{flight.flightDate}</td>
                      <td>{flight.flightTime}</td>
